@@ -1,6 +1,12 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
-import Mock from 'mockjs'
-// require('./mock')
+import router from './router'
+import store from './store'
+// 加载全局样式
+// 只能加载非变量的样式
+import './styles/index.scss'
 
-createApp(App).mount('#app')
+createApp(App)
+    .use(router)
+    .use(store)
+    .mount('#app')

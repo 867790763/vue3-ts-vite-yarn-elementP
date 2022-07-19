@@ -11,7 +11,19 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*" // 相对位置需要配置baseUrl才能识别，否则会报错
+      ],
+      "@/api": [
+        "src/api/*"
+      ],
+      "@/utils": [
+        "src/utils/*"
+      ]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

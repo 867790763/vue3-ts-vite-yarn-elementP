@@ -8,10 +8,7 @@ import { createPinia } from 'pinia'
 const pinia = createPinia()
 
 createApp(App).use(ElementPlus, {
-    locale: locale,
+    //locale: locale,
     // 支持 large、default、small
-    size: Cookies.get('size') || 'default'
+    // size: Cookies.get('size') || 'default'
   }).use(router).use(pinia).mount('#app')
-
-
-  

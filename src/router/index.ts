@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import demoRoutes from './demo'
 
 export const routes = [
     {
@@ -15,12 +16,13 @@ export const routes = [
         path: '/404',
         component: () => import("@/views/404.vue"),
         hidden: true
-    }
+    },
+    ...demoRoutes
 ]
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
 })
 
 export default router;
